@@ -1,0 +1,737 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F0E2F4C277F428D00CC437F /* MySoccerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F4B277F428D00CC437F /* MySoccerApp.swift */; };
+		8F0E2F50277F428E00CC437F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F0E2F4F277F428E00CC437F /* Assets.xcassets */; };
+		8F0E2F53277F428E00CC437F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F0E2F52277F428E00CC437F /* Preview Assets.xcassets */; };
+		8F0E2F5D277F428E00CC437F /* MySoccerAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F5C277F428E00CC437F /* MySoccerAppTests.swift */; };
+		8F0E2F7B277F447600CC437F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F7A277F447600CC437F /* HomeView.swift */; };
+		8F0E2F7D277F44F300CC437F /* ButtonFilterLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F7C277F44F300CC437F /* ButtonFilterLeague.swift */; };
+		8F0E2F80277F450C00CC437F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 8F0E2F7F277F450C00CC437F /* Kingfisher */; };
+		8F0E2F82277F463900CC437F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F81277F463900CC437F /* Constants.swift */; };
+		8F0E2F84277F4E6300CC437F /* CurrentMatchs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F83277F4E6300CC437F /* CurrentMatchs.swift */; };
+		8F0E2F87277F67DD00CC437F /* League.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F86277F67DD00CC437F /* League.swift */; };
+		8F0E2F89277F682F00CC437F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F88277F682F00CC437F /* HomeViewModel.swift */; };
+		8F0E2F8B277F6DDF00CC437F /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F8A277F6DDF00CC437F /* Match.swift */; };
+		8F0E2F8D277F6E2500CC437F /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F8C277F6E2500CC437F /* Team.swift */; };
+		8F0E2F90277F7AD400CC437F /* LeagueRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F8F277F7AD400CC437F /* LeagueRepository.swift */; };
+		8F0E2F932780C87500CC437F /* RestLeague.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F922780C87500CC437F /* RestLeague.swift */; };
+		8F0E2F952780CAC500CC437F /* RestTeam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F942780CAC500CC437F /* RestTeam.swift */; };
+		8F0E2F982780CE1500CC437F /* LeagueInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0E2F972780CE1500CC437F /* LeagueInteractor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8F0E2F59277F428E00CC437F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F0E2F40277F428D00CC437F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F0E2F47277F428D00CC437F;
+			remoteInfo = MySoccerApp;
+		};
+		8F0E2F63277F428E00CC437F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8F0E2F40277F428D00CC437F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8F0E2F47277F428D00CC437F;
+			remoteInfo = MySoccerApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8F0E2F48277F428D00CC437F /* MySoccerApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySoccerApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0E2F4B277F428D00CC437F /* MySoccerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySoccerApp.swift; sourceTree = "<group>"; };
+		8F0E2F4F277F428E00CC437F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8F0E2F52277F428E00CC437F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8F0E2F58277F428E00CC437F /* MySoccerAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySoccerAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0E2F5C277F428E00CC437F /* MySoccerAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MySoccerAppTests.swift; sourceTree = "<group>"; };
+		8F0E2F62277F428E00CC437F /* MySoccerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MySoccerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0E2F7A277F447600CC437F /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		8F0E2F7C277F44F300CC437F /* ButtonFilterLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFilterLeague.swift; sourceTree = "<group>"; };
+		8F0E2F81277F463900CC437F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8F0E2F83277F4E6300CC437F /* CurrentMatchs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMatchs.swift; sourceTree = "<group>"; };
+		8F0E2F86277F67DD00CC437F /* League.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = League.swift; sourceTree = "<group>"; };
+		8F0E2F88277F682F00CC437F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8F0E2F8A277F6DDF00CC437F /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		8F0E2F8C277F6E2500CC437F /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		8F0E2F8F277F7AD400CC437F /* LeagueRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueRepository.swift; sourceTree = "<group>"; };
+		8F0E2F922780C87500CC437F /* RestLeague.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestLeague.swift; sourceTree = "<group>"; };
+		8F0E2F942780CAC500CC437F /* RestTeam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTeam.swift; sourceTree = "<group>"; };
+		8F0E2F972780CE1500CC437F /* LeagueInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeagueInteractor.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F0E2F45277F428D00CC437F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F0E2F80277F450C00CC437F /* Kingfisher in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E2F55277F428E00CC437F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E2F5F277F428E00CC437F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F0E2F3F277F428D00CC437F = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F4A277F428D00CC437F /* MySoccerApp */,
+				8F0E2F5B277F428E00CC437F /* MySoccerAppTests */,
+				8F0E2F49277F428D00CC437F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F0E2F49277F428D00CC437F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F48277F428D00CC437F /* MySoccerApp.app */,
+				8F0E2F58277F428E00CC437F /* MySoccerAppTests.xctest */,
+				8F0E2F62277F428E00CC437F /* MySoccerAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F0E2F4A277F428D00CC437F /* MySoccerApp */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F79277F444900CC437F /* Applications */,
+				8F0E2F75277F43D200CC437F /* Views */,
+				8F0E2F78277F440300CC437F /* ViewModels */,
+				8F0E2F85277F67CC00CC437F /* Models */,
+				8F0E2F8E277F7AAE00CC437F /* Repositories */,
+				8F0E2F962780CDFD00CC437F /* Interactors */,
+				8F0E2F912780C85B00CC437F /* RestObjects */,
+				8F0E2F51277F428E00CC437F /* Preview Content */,
+				8F0E2F81277F463900CC437F /* Constants.swift */,
+			);
+			path = MySoccerApp;
+			sourceTree = "<group>";
+		};
+		8F0E2F51277F428E00CC437F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F52277F428E00CC437F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8F0E2F5B277F428E00CC437F /* MySoccerAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F5C277F428E00CC437F /* MySoccerAppTests.swift */,
+			);
+			path = MySoccerAppTests;
+			sourceTree = "<group>";
+		};
+		8F0E2F75277F43D200CC437F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F77277F43F200CC437F /* Shared */,
+				8F0E2F76277F43E100CC437F /* Home */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8F0E2F76277F43E100CC437F /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F7A277F447600CC437F /* HomeView.swift */,
+				8F0E2F7C277F44F300CC437F /* ButtonFilterLeague.swift */,
+				8F0E2F83277F4E6300CC437F /* CurrentMatchs.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8F0E2F77277F43F200CC437F /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		8F0E2F78277F440300CC437F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F88277F682F00CC437F /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8F0E2F79277F444900CC437F /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F4B277F428D00CC437F /* MySoccerApp.swift */,
+				8F0E2F4F277F428E00CC437F /* Assets.xcassets */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		8F0E2F85277F67CC00CC437F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F86277F67DD00CC437F /* League.swift */,
+				8F0E2F8A277F6DDF00CC437F /* Match.swift */,
+				8F0E2F8C277F6E2500CC437F /* Team.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8F0E2F8E277F7AAE00CC437F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F8F277F7AD400CC437F /* LeagueRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		8F0E2F912780C85B00CC437F /* RestObjects */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F922780C87500CC437F /* RestLeague.swift */,
+				8F0E2F942780CAC500CC437F /* RestTeam.swift */,
+			);
+			path = RestObjects;
+			sourceTree = "<group>";
+		};
+		8F0E2F962780CDFD00CC437F /* Interactors */ = {
+			isa = PBXGroup;
+			children = (
+				8F0E2F972780CE1500CC437F /* LeagueInteractor.swift */,
+			);
+			path = Interactors;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F0E2F47277F428D00CC437F /* MySoccerApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F0E2F6C277F428E00CC437F /* Build configuration list for PBXNativeTarget "MySoccerApp" */;
+			buildPhases = (
+				8F0E2F44277F428D00CC437F /* Sources */,
+				8F0E2F45277F428D00CC437F /* Frameworks */,
+				8F0E2F46277F428D00CC437F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MySoccerApp;
+			packageProductDependencies = (
+				8F0E2F7F277F450C00CC437F /* Kingfisher */,
+			);
+			productName = MySoccerApp;
+			productReference = 8F0E2F48277F428D00CC437F /* MySoccerApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8F0E2F57277F428E00CC437F /* MySoccerAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F0E2F6F277F428E00CC437F /* Build configuration list for PBXNativeTarget "MySoccerAppTests" */;
+			buildPhases = (
+				8F0E2F54277F428E00CC437F /* Sources */,
+				8F0E2F55277F428E00CC437F /* Frameworks */,
+				8F0E2F56277F428E00CC437F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F0E2F5A277F428E00CC437F /* PBXTargetDependency */,
+			);
+			name = MySoccerAppTests;
+			productName = MySoccerAppTests;
+			productReference = 8F0E2F58277F428E00CC437F /* MySoccerAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8F0E2F61277F428E00CC437F /* MySoccerAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F0E2F72277F428E00CC437F /* Build configuration list for PBXNativeTarget "MySoccerAppUITests" */;
+			buildPhases = (
+				8F0E2F5E277F428E00CC437F /* Sources */,
+				8F0E2F5F277F428E00CC437F /* Frameworks */,
+				8F0E2F60277F428E00CC437F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8F0E2F64277F428E00CC437F /* PBXTargetDependency */,
+			);
+			name = MySoccerAppUITests;
+			productName = MySoccerAppUITests;
+			productReference = 8F0E2F62277F428E00CC437F /* MySoccerAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F0E2F40277F428D00CC437F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					8F0E2F47277F428D00CC437F = {
+						CreatedOnToolsVersion = 13.1;
+					};
+					8F0E2F57277F428E00CC437F = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 8F0E2F47277F428D00CC437F;
+					};
+					8F0E2F61277F428E00CC437F = {
+						CreatedOnToolsVersion = 13.1;
+						TestTargetID = 8F0E2F47277F428D00CC437F;
+					};
+				};
+			};
+			buildConfigurationList = 8F0E2F43277F428D00CC437F /* Build configuration list for PBXProject "MySoccerApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F0E2F3F277F428D00CC437F;
+			packageReferences = (
+				8F0E2F7E277F450C00CC437F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
+			productRefGroup = 8F0E2F49277F428D00CC437F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F0E2F47277F428D00CC437F /* MySoccerApp */,
+				8F0E2F57277F428E00CC437F /* MySoccerAppTests */,
+				8F0E2F61277F428E00CC437F /* MySoccerAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8F0E2F46277F428D00CC437F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F0E2F53277F428E00CC437F /* Preview Assets.xcassets in Resources */,
+				8F0E2F50277F428E00CC437F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E2F56277F428E00CC437F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E2F60277F428E00CC437F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F0E2F44277F428D00CC437F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F0E2F90277F7AD400CC437F /* LeagueRepository.swift in Sources */,
+				8F0E2F8D277F6E2500CC437F /* Team.swift in Sources */,
+				8F0E2F952780CAC500CC437F /* RestTeam.swift in Sources */,
+				8F0E2F4C277F428D00CC437F /* MySoccerApp.swift in Sources */,
+				8F0E2F7D277F44F300CC437F /* ButtonFilterLeague.swift in Sources */,
+				8F0E2F932780C87500CC437F /* RestLeague.swift in Sources */,
+				8F0E2F89277F682F00CC437F /* HomeViewModel.swift in Sources */,
+				8F0E2F8B277F6DDF00CC437F /* Match.swift in Sources */,
+				8F0E2F982780CE1500CC437F /* LeagueInteractor.swift in Sources */,
+				8F0E2F84277F4E6300CC437F /* CurrentMatchs.swift in Sources */,
+				8F0E2F7B277F447600CC437F /* HomeView.swift in Sources */,
+				8F0E2F87277F67DD00CC437F /* League.swift in Sources */,
+				8F0E2F82277F463900CC437F /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E2F54277F428E00CC437F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F0E2F5D277F428E00CC437F /* MySoccerAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8F0E2F5E277F428E00CC437F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8F0E2F5A277F428E00CC437F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F0E2F47277F428D00CC437F /* MySoccerApp */;
+			targetProxy = 8F0E2F59277F428E00CC437F /* PBXContainerItemProxy */;
+		};
+		8F0E2F64277F428E00CC437F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8F0E2F47277F428D00CC437F /* MySoccerApp */;
+			targetProxy = 8F0E2F63277F428E00CC437F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8F0E2F6A277F428E00CC437F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8F0E2F6B277F428E00CC437F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8F0E2F6D277F428E00CC437F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MySoccerApp/Preview Content\"";
+				DEVELOPMENT_TEAM = V89TG33T3A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MySoccerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8F0E2F6E277F428E00CC437F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MySoccerApp/Preview Content\"";
+				DEVELOPMENT_TEAM = V89TG33T3A;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MySoccerApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8F0E2F70277F428E00CC437F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V89TG33T3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MySoccerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySoccerApp.app/MySoccerApp";
+			};
+			name = Debug;
+		};
+		8F0E2F71277F428E00CC437F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V89TG33T3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MySoccerAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MySoccerApp.app/MySoccerApp";
+			};
+			name = Release;
+		};
+		8F0E2F73277F428E00CC437F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V89TG33T3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MySoccerAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MySoccerApp;
+			};
+			name = Debug;
+		};
+		8F0E2F74277F428E00CC437F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V89TG33T3A;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.MySoccerAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MySoccerApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F0E2F43277F428D00CC437F /* Build configuration list for PBXProject "MySoccerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0E2F6A277F428E00CC437F /* Debug */,
+				8F0E2F6B277F428E00CC437F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F0E2F6C277F428E00CC437F /* Build configuration list for PBXNativeTarget "MySoccerApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0E2F6D277F428E00CC437F /* Debug */,
+				8F0E2F6E277F428E00CC437F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F0E2F6F277F428E00CC437F /* Build configuration list for PBXNativeTarget "MySoccerAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0E2F70277F428E00CC437F /* Debug */,
+				8F0E2F71277F428E00CC437F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F0E2F72277F428E00CC437F /* Build configuration list for PBXNativeTarget "MySoccerAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F0E2F73277F428E00CC437F /* Debug */,
+				8F0E2F74277F428E00CC437F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F0E2F7E277F450C00CC437F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F0E2F7F277F450C00CC437F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F0E2F7E277F450C00CC437F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 8F0E2F40277F428D00CC437F /* Project object */;
+}

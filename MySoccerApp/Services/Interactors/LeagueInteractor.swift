@@ -15,7 +15,9 @@ class LeagueInteractor {
         leagueRepository.getLeague(with: id, year: year) { restLeague in
             var teams = [Team]()
 
-            for team in restLeague.standings[0] {
+            let jsonTeams = restLeague.standings[0]
+
+            for team in jsonTeams {
                 let newTeam = Team(logo: team.team.logo, name: team.team.name)
                 teams.append(newTeam)
             }

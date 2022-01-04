@@ -16,8 +16,6 @@ struct HomeView: View {
             ScrollView {
                 ScrollView(.horizontal,showsIndicators: false) {
                     HStack {
-                        ButtonFilterLeague(logo: viewModel.finalLeague?.logo ?? "", title: viewModel.finalLeague?.name ?? "")
-
                         ForEach(viewModel.leagues) { league in
                             ButtonFilterLeague(logo: league.logo, title: league.name)
                         }
@@ -37,10 +35,10 @@ struct HomeView: View {
                     }
                     .padding(.vertical)
 
-                    ForEach(viewModel.matchs) { match in
+                    /*ForEach(viewModel.matchs) { match in
                         CurrentMatchs(match: match)
                             .padding(.top, 10)
-                    }
+                    }*/
 
                 }.padding(.horizontal)
             }

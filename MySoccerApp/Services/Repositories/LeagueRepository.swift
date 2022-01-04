@@ -19,8 +19,8 @@ class LeagueRepository {
             guard let data = data else { return }
             let decoder = JSONDecoder()
 
-            let restLeague = try! decoder.decode(RestLeagueResponse.self, from: data)
-            completion(restLeague.response[0].league)
+            let restLeagueResponse = try! decoder.decode(RestLeagueResponse.self, from: data)
+            completion(restLeagueResponse.response[0].league)
         }
         task.resume()
     }

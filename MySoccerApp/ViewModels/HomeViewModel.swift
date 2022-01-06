@@ -11,26 +11,25 @@ class HomeViewModel: ObservableObject {
 
     @Published var currentLeague: League?
     @Published var leagues: [League] = [League]()
-
-    let leagueRepository: LeagueRepository
+    let leagueInteractor: LeagueInteractor
 
     init() {
-        self.leagueRepository = LeagueRepository()
+        self.leagueInteractor = LeagueInteractor()
     }
 
     func setCurrentLeague(league: League) {
         currentLeague = league
-        //LeagueRepository().getMatchs()
+        //LeagueInteractor().getMatchs()
     }
 
-    func getLeague() {
+    func getLeague() async throws {
         let mainLeaguesID = [39, 78, 140, 61, 135]
 
         do {
-            let url = try DefaultRequestGenerator().generateRequest(endpoint: .leagues, method: .GET, queryParameters: ["league":"39","seasons":"2021"])
-            print(url)
-        } catch (let error) {
-            print(error)
+            let leagues = try await leagueInteractor.getLeague(with: 39)
+            print(leagues)
+        }catch {
+            throw APICallerError.internalServerError
         }
 
         mainLeaguesID.forEach { numberID in

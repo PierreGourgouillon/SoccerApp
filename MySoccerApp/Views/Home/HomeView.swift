@@ -45,7 +45,9 @@ struct HomeView: View {
             .background(Color(red: 242/255, green: 241/255, blue: 243/255))
             .navigationBarTitleDisplayMode(.inline)
         }.onAppear {
-            viewModel.getLeague()
+            Task {
+                try await viewModel.getLeague()
+            }
         }
     }
 }

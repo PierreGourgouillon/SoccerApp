@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct APIResponse: Codable {
-    let response: [ResponseLeague]
-}
+//struct APIResponse: Codable {
+//    let response: [ResponseLeague]
+//}
 
 struct ResponseLeague: Codable {
     let league: League

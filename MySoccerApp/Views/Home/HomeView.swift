@@ -39,7 +39,7 @@ struct HomeView: View {
 //                        CurrentMatchs(match: match)
 //                            .padding(.top, 10)
 //                    }
-
+                    
                 }.padding(.horizontal)
             }
             .background(Color(red: 242/255, green: 241/255, blue: 243/255))

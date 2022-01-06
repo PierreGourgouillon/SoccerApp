@@ -9,19 +9,20 @@ import Foundation
 
 class LeagueRepository {
 
-    func getLeague(with id: Int, year: Int, completion: @escaping (RestLeague) -> Void) {
+    /*func getLeague(with id: Int, year: Int) async throws -> League {
         let url = URL(string: "https://v3.football.api-sports.io/standings?league=\(id)&season=\(String(year))")!
 
         var request = URLRequest(url: url)
         request.addValue(API_KEY, forHTTPHeaderField: "x-rapidapi-key")
 
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data else { return }
-            let decoder = JSONDecoder()
+        let result: (Data, URLResponse)? = try? await URLSession.shared.data(for: request, delegate: nil)
 
-            let restLeagueResponse = try! decoder.decode(RestLeagueResponse.self, from: data)
-            completion(restLeagueResponse.response[0].league)
-        }
-        task.resume()
-    }
+        guard let (data, response) = result,
+              let strongResponse = result as? HTTPURLResponse else {
+                  throw APICallerError.internalServerError
+              }
+
+        if strongResponse.statusCode
+
+    }*/
 }

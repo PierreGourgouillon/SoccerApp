@@ -44,12 +44,12 @@ struct CurrentMatchs: View {
             }
 
             HStack {
-                KFImage(URL(string: match.outSideTeam.logo))
+                KFImage(URL(string: match.awayTeam.logo))
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 45, height: 45)
 
-                Text(match.outSideTeam.name)
+                Text(match.awayTeam.name)
                     .font(.system(size: 15))
                     .fontWeight(.semibold)
                     .foregroundColor(Color(red: 29/255, green: 88/255, blue: 143/255))
@@ -64,13 +64,10 @@ struct CurrentMatchs: View {
 }
 
 struct MatchOfTheDay_Previews: PreviewProvider {
-    static let teamOne = Team(logo: "https://media.api-sports.io/football/teams/40.png", name: "Liverpool")
-    static let teamTwo = Team(logo: "https://media.api-sports.io/football/teams/41.png", name: "Southampton")
-
     
     static var previews: some View {
         CurrentMatchs(
-            match: Match(homeTeam: teamOne, outSideTeam: teamTwo, date: "30 OCT", hour: "06:04")
+            match: Match(homeTeam: teamOne, awayTeam: teamTwo, date: "30 OCT", hour: "06:04")
         )
             .padding()
             .background(Color(red: 154/255, green: 164/255, blue: 179/255))

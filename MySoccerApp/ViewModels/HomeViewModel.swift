@@ -9,32 +9,30 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
 
-    @Published var finalLeague: League?
-
-    let teamOne = Team(logo: "https://media.api-sports.io/football/teams/40.png", name: "Liverpool")
-    let teamTwo = Team(logo: "https://media.api-sports.io/football/teams/41.png", name: "Southampton")
-
-    let leagues: [League]
-    let match: Match
-    let matchs: [Match]
+    @Published var currentLeague: League?
+    @Published var leagues: [League] = [League]()
+    let leagueInteractor: LeagueInteractor
 
     init() {
-        self.match = Match(homeTeam: teamOne, outSideTeam: teamTwo, date: "30 OCT", hour: "06:04")
-        self.matchs = [match, match, match, match]
-
-        self.leagues =  [
-            League(name: "Ligue 1", logo: "https://media.api-sports.io/football/leagues/61.png", year: 2021, teams: [teamOne, teamTwo]),
-            League(name: "Ligue 2", logo: "https://media.api-sports.io/football/leagues/62.png", year: 2021, teams: [teamOne, teamTwo]),
-            League(name: "National", logo: "https://media.api-sports.io/football/leagues/63.png", year: 2021, teams: [teamOne, teamTwo])
-        ]
+        self.leagueInteractor = LeagueInteractor()
     }
 
-    func getLeague() {
-        LeagueInteractor().getLeague(forLeagueID: 39) { league in
-            DispatchQueue.main.async {
-                self.finalLeague = league
+    func setCurrentLeague(league: League) {
+        currentLeague = league
+        //LeagueInteractor().getMatchs()
+    }
+
+    @MainActor
+    func getLeague() async throws {
+        let mainLeaguesID = [39, 78, 140, 61, 135]
+
+        do {
+            for id in mainLeaguesID {
+                let responseLeague = try await leagueInteractor.getLeague(with: id)
+                leagues.append(responseLeague[0].league)
             }
+        }catch {
+            throw APICallerError.internalServerError
         }
     }
-
 }

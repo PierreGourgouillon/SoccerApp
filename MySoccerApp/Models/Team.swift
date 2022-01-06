@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Team {
-    let logo: String
+struct Team: Codable {
     let name: String
+    let logo: String
 }

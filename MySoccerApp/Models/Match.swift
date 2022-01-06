@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Match: Identifiable {
+struct Match: Identifiable, Decodable {
     let id = UUID().uuidString
     let homeTeam: Team
-    let outSideTeam: Team
+    let awayTeam: Team
     let date: String
     let hour: String
 }

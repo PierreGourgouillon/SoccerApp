@@ -22,19 +22,17 @@ class HomeViewModel: ObservableObject {
         //LeagueInteractor().getMatchs()
     }
 
+    @MainActor
     func getLeague() async throws {
         let mainLeaguesID = [39, 78, 140, 61, 135]
 
         do {
-            let leagues = try await leagueInteractor.getLeague(with: 39)
-            print(leagues)
+            for id in mainLeaguesID {
+                let responseLeague = try await leagueInteractor.getLeague(with: id)
+                leagues.append(responseLeague[0].league)
+            }
         }catch {
             throw APICallerError.internalServerError
-        }
-
-        mainLeaguesID.forEach { numberID in
-            /*leagueRepository.getLeague(with: numberID, year: 2021)
-            leagues.append()*/
         }
     }
 }

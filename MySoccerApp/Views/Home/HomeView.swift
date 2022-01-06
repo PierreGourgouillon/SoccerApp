@@ -35,10 +35,10 @@ struct HomeView: View {
                     }
                     .padding(.vertical)
 
-                    /*ForEach(viewModel.matchs) { match in
-                        CurrentMatchs(match: match)
-                            .padding(.top, 10)
-                    }*/
+//                    ForEach(viewModel.matchs) { match in
+//                        CurrentMatchs(match: match)
+//                            .padding(.top, 10)
+//                    }
 
                 }.padding(.horizontal)
             }

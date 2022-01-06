@@ -9,6 +9,15 @@
           "revision": "15dde451f97a8ae18ea4f94969b7c8546f034b37",
           "version": null
         }
+      },
+      {
+        "package": "netfox",
+        "repositoryURL": "https://github.com/kasketis/netfox",
+        "state": {
+          "branch": null,
+          "revision": "879a3ed129db848905f0a658abe42c36bd0e1ad8",
+          "version": "1.20.0"
+        }
       }
     ]
   },

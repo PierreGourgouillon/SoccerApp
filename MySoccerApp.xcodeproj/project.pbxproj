@@ -28,6 +28,7 @@
 		8F25B9D0278665CA007B0D13 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F25B9CF278665CA007B0D13 /* HTTPMethod.swift */; };
 		8F436F082781EF0B000C51AF /* MockedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F436F072781EF0B000C51AF /* MockedData.swift */; };
 		8FFA6A15278750A4009EF565 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FFA6A14278750A4009EF565 /* APIResponse.swift */; };
+		8FFA6A1827876E6B009EF565 /* netfox in Frameworks */ = {isa = PBXBuildFile; productRef = 8FFA6A1727876E6B009EF565 /* netfox */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FFA6A1827876E6B009EF565 /* netfox in Frameworks */,
 				8F0E2F80277F450C00CC437F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +252,7 @@
 			name = MySoccerApp;
 			packageProductDependencies = (
 				8F0E2F7F277F450C00CC437F /* Kingfisher */,
+				8FFA6A1727876E6B009EF565 /* netfox */,
 			);
 			productName = MySoccerApp;
 			productReference = 8F0E2F48277F428D00CC437F /* MySoccerApp.app */;
@@ -325,6 +328,7 @@
 			mainGroup = 8F0E2F3F277F428D00CC437F;
 			packageReferences = (
 				8F0E2F7E277F450C00CC437F /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				8FFA6A1627876E6B009EF565 /* XCRemoteSwiftPackageReference "netfox" */,
 			);
 			productRefGroup = 8F0E2F49277F428D00CC437F /* Products */;
 			projectDirPath = "";
@@ -739,6 +743,14 @@
 				kind = branch;
 			};
 		};
+		8FFA6A1627876E6B009EF565 /* XCRemoteSwiftPackageReference "netfox" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kasketis/netfox";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -746,6 +758,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8F0E2F7E277F450C00CC437F /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		8FFA6A1727876E6B009EF565 /* netfox */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8FFA6A1627876E6B009EF565 /* XCRemoteSwiftPackageReference "netfox" */;
+			productName = netfox;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

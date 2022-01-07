@@ -10,7 +10,7 @@ import XCTest
 
 class DefaultRequestGenerator_Specs: XCTestCase {
 
-    func test_Generates_Request_With_No_Query_Parameters() {
+    func test_Generates_request_with_no_query_parameters() {
         guard let url = URL(string: "https://v3.football.api-sports.io" + HTTPEndpoint.leagues.rawValue) else { return }
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = HTTPMethod.GET.rawValue
@@ -21,7 +21,7 @@ class DefaultRequestGenerator_Specs: XCTestCase {
         thenRequest(is: urlRequest)
     }
 
-    func test_Generates_Request_With_Query_Parameters() {
+    func test_Generates_request_with_query_parameters() {
         let params = "?season=2021"
         guard let url = URL(string: "https://v3.football.api-sports.io" + HTTPEndpoint.leagues.rawValue + params) else { return }
         var urlRequest = URLRequest(url: url)

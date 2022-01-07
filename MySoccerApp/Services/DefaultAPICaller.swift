@@ -15,7 +15,11 @@ class DefaultAPICaller: APICaller {
 
     private let jsonDecoder = JSONDecoder()
     private let goodStatusCode = Set<Int>(200...207)
-    private let urlSession = URLSession.shared
+    private let urlSession: URLSessionProtocol
+
+    init(urlSession: URLSessionProtocol = URLSession.shared) {
+        self.urlSession = urlSession
+    }
 
     func call<T: Decodable>(_ urlRequest: URLRequest, decodedType: T.Type) async throws -> [T] {
         let result: (Data, URLResponse)? = try? await urlSession.data(for: urlRequest, delegate: nil)

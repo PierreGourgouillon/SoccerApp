@@ -12,9 +12,9 @@ class LeagueInteractor {
     private var apiCaller: APICaller
     private var requestGenerator: RequestGenerator
 
-    init() {
-        self.apiCaller = DefaultAPICaller()
-        self.requestGenerator = DefaultRequestGenerator()
+    init(apiCaller: APICaller, requestGenerator: RequestGenerator) {
+        self.apiCaller = apiCaller
+        self.requestGenerator = requestGenerator
     }
 
     func getLeague(with idLeague: Int, season: Int = 2021) async throws -> [ResponseLeague] {

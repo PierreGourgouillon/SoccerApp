@@ -14,7 +14,7 @@ class HomeViewModel: ObservableObject {
     let leagueInteractor: LeagueInteractor
 
     init() {
-        self.leagueInteractor = LeagueInteractor()
+        self.leagueInteractor = LeagueInteractor(apiCaller: DefaultAPICaller(), requestGenerator: DefaultRequestGenerator())
     }
 
     func setCurrentLeague(league: League) {

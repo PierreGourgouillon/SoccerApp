@@ -29,7 +29,7 @@ class HomeViewModel: ObservableObject {
         do {
             for id in mainLeaguesID {
                 let responseLeague = try await leagueInteractor.getLeague(with: id)
-                leagues.append(responseLeague[0].league)
+                leagues.append(responseLeague.league)
             }
         }catch {
             throw APICallerError.internalServerError

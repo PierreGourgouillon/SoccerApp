@@ -17,12 +17,17 @@ class LeagueInteractor {
         self.requestGenerator = requestGenerator
     }
 
-    func getLeague(with idLeague: Int, season: Int = 2021) async throws -> [ResponseLeague] {
+    func getLeague(with idLeague: Int, season: Int = 2021) async throws -> ResponseLeague {
         do {
             let url = try requestGenerator.generateRequest(endpoint: .leagues, method: .GET,
                                                            queryParameters: ["season":String(season),"league":String(idLeague)])
             let response = try await apiCaller.call(url, decodedType: ResponseLeague.self)
-            return response
+
+            if !(response.isEmpty) {
+                return response[0]
+            }
+            
+            throw APICallerError.internalServerError
         }catch {
             throw APICallerError.internalServerError
         }

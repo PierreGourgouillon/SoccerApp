@@ -12,7 +12,7 @@ class DefaultAPICaller_Specs: XCTestCase {
 
     func test_Gets_data_in_back_end() async {
         let body = "{\"response\": [{\"argument\": \"test\"}]}"
-        let expectedBody = TestDecodable(argument: "test")
+        let expectedBody = [TestDecodable(argument: "test")]
 
         givenAPICaller(withHTTPResponseCode: 200, body: body.data(using: .utf8)!)
         await whenMakingCall(withURLRequest: request, decodeTo: TestDecodable.self)
@@ -56,9 +56,9 @@ class DefaultAPICaller_Specs: XCTestCase {
         XCTAssertEqual(expected, self.error.errorDescription)
     }
 
-    private func thenAPICallisSucceeding(with responseBody: TestDecodable) {
+    private func thenAPICallisSucceeding(with responseBody: [TestDecodable]) {
         XCTAssertNil(error)
-        XCTAssertEqual(responseBody, (self.response. as? TestDecodable))
+        XCTAssertEqual(responseBody, (self.response as? [TestDecodable]))
     }
 
 

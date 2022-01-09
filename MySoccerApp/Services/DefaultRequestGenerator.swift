@@ -8,14 +8,14 @@
 import Foundation
 
 protocol RequestGenerator {
-    func generateRequest(endpoint: HTTPEndpoint, method: HTTPMethod, queryParameters: [String: String]) throws -> URLRequest
+    func generateRequest(endpoint: HTTPEndpoint, method: HTTPMethod, queryParameters: [String: String]?) throws -> URLRequest
 }
 
 class DefaultRequestGenerator: RequestGenerator {
 
     private let fixHeaders = ["x-rapidapi-key": API_KEY]
 
-    func generateRequest(endpoint: HTTPEndpoint, method: HTTPMethod, queryParameters: [String: String]) throws -> URLRequest {
+    func generateRequest(endpoint: HTTPEndpoint, method: HTTPMethod, queryParameters: [String: String]?) throws -> URLRequest {
 
         let url = try computeURL(endpoint: endpoint, queryParams: queryParameters)
 

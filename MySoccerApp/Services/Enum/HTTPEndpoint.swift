@@ -9,4 +9,5 @@ import Foundation
 
 enum HTTPEndpoint: String {
     case leagues = "/standings"
+    case matchs = "/fixtures"
 }

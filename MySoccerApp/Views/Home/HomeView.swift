@@ -35,10 +35,12 @@ struct HomeView: View {
                     }
                     .padding(.vertical)
 
-//                    ForEach(viewModel.matchs) { match in
-//                        CurrentMatchs(match: match)
-//                            .padding(.top, 10)
-//                    }
+                    if let matchs = viewModel.matchs {
+                        ForEach(matchs) { match in
+                            CurrentMatchs(viewModel: CurrentMatchsViewModel(match: match))
+                                .padding(.top, 10)
+                        }
+                    }
                     
                 }.padding(.horizontal)
             }
@@ -47,6 +49,7 @@ struct HomeView: View {
         }.onAppear {
             Task {
                 try await viewModel.getLeague()
+                try await viewModel.getMatchs(leagueId: 39)
             }
         }
     }

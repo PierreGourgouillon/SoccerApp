@@ -11,6 +11,8 @@ struct Match: Identifiable, Decodable {
     var id = UUID().uuidString
     let homeTeam: Team
     let awayTeam: Team
-    let date: String
-    let hour: String
+    let date: Date
+    let scoreHome: Int?
+    let scoreAway: Int?
+    let place: String
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Match: Identifiable, Decodable {
+struct Match: Identifiable, Codable, Equatable {
     var id = UUID().uuidString
     let homeTeam: Team
     let awayTeam: Team

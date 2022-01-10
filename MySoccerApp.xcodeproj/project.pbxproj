@@ -30,6 +30,7 @@
 		8F521D56278C8B8600D0E1E0 /* RestMatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F521D55278C8B8600D0E1E0 /* RestMatch.swift */; };
 		8F521D59278C9C3900D0E1E0 /* ModelFormator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F521D58278C9C3900D0E1E0 /* ModelFormator.swift */; };
 		8F521D5B278CACE400D0E1E0 /* CurrentMatchsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F521D5A278CACE400D0E1E0 /* CurrentMatchsViewModel.swift */; };
+		8F521D5E278CBAF000D0E1E0 /* CurrentMatchsViewModel_Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F521D5D278CBAF000D0E1E0 /* CurrentMatchsViewModel_Specs.swift */; };
 		8F97E10D27884F34005035C8 /* DefaultAPICaller_Specs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97E10C27884F34005035C8 /* DefaultAPICaller_Specs.swift */; };
 		8F97E10F27885010005035C8 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97E10E27885010005035C8 /* URLSessionProtocol.swift */; };
 		8F97E111278850E1005035C8 /* FakeURLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F97E110278850E1005035C8 /* FakeURLSession.swift */; };
@@ -77,6 +78,7 @@
 		8F521D55278C8B8600D0E1E0 /* RestMatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestMatch.swift; sourceTree = "<group>"; };
 		8F521D58278C9C3900D0E1E0 /* ModelFormator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFormator.swift; sourceTree = "<group>"; };
 		8F521D5A278CACE400D0E1E0 /* CurrentMatchsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMatchsViewModel.swift; sourceTree = "<group>"; };
+		8F521D5D278CBAF000D0E1E0 /* CurrentMatchsViewModel_Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentMatchsViewModel_Specs.swift; sourceTree = "<group>"; };
 		8F97E10C27884F34005035C8 /* DefaultAPICaller_Specs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAPICaller_Specs.swift; sourceTree = "<group>"; };
 		8F97E10E27885010005035C8 /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		8F97E110278850E1005035C8 /* FakeURLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeURLSession.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				8FF674BF27879B69004176F8 /* Services */,
+				8F521D5C278CBAB800D0E1E0 /* ViewModels */,
 			);
 			path = MySoccerAppTests;
 			sourceTree = "<group>";
@@ -268,6 +271,14 @@
 				8F521D58278C9C3900D0E1E0 /* ModelFormator.swift */,
 			);
 			path = Formator;
+			sourceTree = "<group>";
+		};
+		8F521D5C278CBAB800D0E1E0 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8F521D5D278CBAF000D0E1E0 /* CurrentMatchsViewModel_Specs.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		8F97E10B27884F24005035C8 /* APICaller */ = {
@@ -459,6 +470,7 @@
 				8FF674CC2787B2A1004176F8 /* LeagueInteractor_Specs.swift in Sources */,
 				8F97E10D27884F34005035C8 /* DefaultAPICaller_Specs.swift in Sources */,
 				8F97E111278850E1005035C8 /* FakeURLSession.swift in Sources */,
+				8F521D5E278CBAF000D0E1E0 /* CurrentMatchsViewModel_Specs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

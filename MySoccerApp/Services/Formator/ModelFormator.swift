@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class ModelFormator {
 
     static func formatRestMatch(rest: RestResponseMatch) -> Match {

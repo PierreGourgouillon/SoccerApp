@@ -15,9 +15,9 @@ class HomeViewModel: ObservableObject {
     let leagueInteractor: LeagueInteractor
     let matchInteractor: MatchInteractor
 
-    init() {
-        self.leagueInteractor = LeagueInteractor(apiCaller: DefaultAPICaller(), requestGenerator: DefaultRequestGenerator())
-        self.matchInteractor =  MatchInteractor(apiCaller: DefaultAPICaller(), requestGenerator: DefaultRequestGenerator())
+    init(leagueInteractor: LeagueInteractor, matchInteractor: MatchInteractor) {
+        self.leagueInteractor = leagueInteractor
+        self.matchInteractor =  matchInteractor
     }
 
     func setCurrentLeague(league: League) {
@@ -47,5 +47,4 @@ class HomeViewModel: ObservableObject {
             throw APICallerError.internalServerError
         }
     }
-
 }

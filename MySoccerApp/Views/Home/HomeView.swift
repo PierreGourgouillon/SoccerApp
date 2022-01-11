@@ -57,6 +57,9 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: HomeViewModel())
+        HomeView(viewModel: HomeViewModel(
+            leagueInteractor: DefaultLeagueInteractor(apiCaller: DefaultAPICaller(), requestGenerator: DefaultRequestGenerator()),
+            matchInteractor: DefaultMatchInteractor(apiCaller: DefaultAPICaller(), requestGenerator: DefaultRequestGenerator())
+            ))
     }
 }

@@ -26,15 +26,15 @@ class LeagueInteractor_Specs: XCTestCase {
 //                                           requestGenerator: FakeRequestGenerator(body: body))
 //    }
 
-    private func whenGettingResponse(idLeague: Int, season: Int) async {
-        do {
-            interactorResponse = try await self.interactor.getLeague(with: idLeague, season: season)
-        } catch (let error) {
-            interactorError = (error as! APICallerError)
-        }
-    }
+//    private func whenGettingResponse(idLeague: Int) async {
+//        do {
+//            interactorResponse = try await self.interactor.getLeague(with: idLeague)
+//        } catch (let error) {
+//            interactorError = (error as! APICallerError)
+//        }
+//    }
 
     private var interactorResponse: Any!
-    private var interactor: LeagueInteractor!
+    private var interactor: DefaultLeagueInteractor!
     private var interactorError: APICallerError!
 }

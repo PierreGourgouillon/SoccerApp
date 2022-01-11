@@ -7,7 +7,11 @@
 
 import Foundation
 
-class MatchInteractor {
+protocol MatchInteractor {
+    func matchOfTheWeek(withLeagueId leagueId: Int) async throws -> [Match]
+}
+
+class DefaultMatchInteractor: MatchInteractor {
 
     private var apiCaller: APICaller
     private var requestGenerator: RequestGenerator

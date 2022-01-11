@@ -11,7 +11,11 @@ import SwiftUI
 struct MySoccerApp: App {
     var body: some Scene {
         WindowGroup {
-            HomeView(viewModel: HomeViewModel())
+            HomeView(viewModel: HomeViewModel(
+                leagueInteractor: DefaultLeagueInteractor(apiCaller: DefaultAPICaller(), requestGenerator: DefaultRequestGenerator()),
+                matchInteractor: DefaultMatchInteractor(apiCaller: DefaultAPICaller(), requestGenerator: DefaultRequestGenerator())
+                )
+            )
         }
     }
 }

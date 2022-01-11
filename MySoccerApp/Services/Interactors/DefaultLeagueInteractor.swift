@@ -7,7 +7,11 @@
 
 import Foundation
 
-class LeagueInteractor {
+protocol LeagueInteractor {
+    func getLeague(with idLeague: Int) async throws -> League
+}
+
+class DefaultLeagueInteractor: LeagueInteractor {
 
     private var apiCaller: APICaller
     private var requestGenerator: RequestGenerator
@@ -17,8 +21,9 @@ class LeagueInteractor {
         self.requestGenerator = requestGenerator
     }
 
-    func getLeague(with idLeague: Int, season: Int = Date().getYear() - 1) async throws -> League {
+    func getLeague(with idLeague: Int) async throws -> League {
         do {
+            let season = Date().getYear() - 1
             let url = try requestGenerator.generateRequest(endpoint: .leagues, method: .GET,
                                                            queryParameters: ["season":String(season),"league":String(idLeague)])
             let response = try await apiCaller.call(url, decodedType: ResponseLeague.self)

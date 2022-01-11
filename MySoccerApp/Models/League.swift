@@ -11,7 +11,7 @@ struct ResponseLeague: Codable {
     let league: League
 }
 
-struct League: Identifiable, Codable {
+struct League: Identifiable, Codable, Equatable {
     let id: Int
     let name: String
     let logo: String
@@ -50,7 +50,7 @@ struct League: Identifiable, Codable {
     }
 }
 
-struct Standing: Codable {
+struct Standing: Codable, Equatable {
     let rank: Int
     let team: Team
     let form: String
